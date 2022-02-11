@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>A Piece of Cake</title>
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+        
+    </head>
+
+    <body>       
+        
+        <style>
+            
+            body {
+                font-family: sans-serif;
+                text-align:center;
+                background-color: rgb(44, 44, 44);
+                color: white
+            }
+
+            .flame {
+            background-color: #F4D03F;
+            opacity:0.9;
+            box-shadow:inset 0 -5px 5px #D35400, 5px -5px 20px #FBFFA3;
+            width:10px;
+            height:20px;
+            border-radius:50%;
+            animation: flame 0.5s infinite;
+            margin:auto
+            }
+
+            @keyframes flame {
+                from, to { transform: scale(1, 1); }
+                25% { transform: scale(0.9, 1.1); }
+                50% { transform: scale(1.1, 0.9); }
+                75% { transform: scale(0.95, 1.05); }
+                }
+
+            button {
+                border-style: none;
+                padding:5px;
+                padding-left:20px;
+                padding-right:20px;
+                border-radius: 20px;
+                background-color:#17A07C;
+                color:white;
+                cursor: pointer;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            }
+
+            button:hover {
+                background-color:#F4D03F;
+                color:black;
+                cursor: pointer;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            
+
+        </style>
+
+
+        <div style="text-align:center;align-items: center;margin:auto">
+            
+            <h1 style="margin-top:100px">A PIECE OF CAKE</h1>
+            
+            <br><br>
+                    
+            <div style="height:20px;"><div id="cake_flame" class="flame"></div></div>
+            <div id="cake_candle" style="width:6px;height:25px;background-color:#17A07C;border-top:2px;margin:auto"></div>
+            <div id="cake_layer_6" style="width:120px;height:16px;border-radius:2px;background-color:burlywood;border-top:2px;margin:auto;border-top-right-radius: 12px;border-top-left-radius: 12px;"></div>
+            <div id="cake_layer_5" style="width:120px;height:16px;border-radius:2px;background-color:yellow;border-top:2px;border-color:black;border-top-style:solid;margin:auto"></div>
+            <div id="cake_layer_4" style="width:120px;height:16px;border-radius:2px;background-color:pink;border-top:2px;border-color:black;border-top-style:solid;margin:auto"></div>
+            <div id="cake_layer_3" style="width:180px;height:16px;border-radius:2px;background-color:burlywood;border-top:2px;margin:auto;border-top-right-radius: 12px;border-top-left-radius: 12px;"></div>
+            <div id="cake_layer_2" style="width:180px;height:16px;border-radius:2px;background-color:yellow;border-top:2px;border-color:black;border-top-style:solid;margin:auto"></div>
+            <div id="cake_layer_1" style="width:180px;height:16px;border-radius:2px;background-color:pink;border-top:2px;border-color:black;border-top-style:solid;margin:auto"></div>
+            <div id="cake_holder_top" style="width:240px;height:8px;border-radius:4px;background-color:rgb(236, 221, 193);margin:auto"></div>
+            <div id="cake_holder_stand" style="width:12px;height:30px;background-color:rgb(236, 221, 193);margin:auto" ></div>
+            <div id="cake_holder_base" style="width:60px;height:8px;border-radius:4px;background-color:rgb(236, 221, 193);margin:auto"></div>
+            
+                
+            <br><br>
+            <p>An example of a simple interactive webpage using HTML, CSS and Javascript.</p>
+        
+            <h3>
+            Let's explore it, reverse engineer it, and modify it together.
+            </h3>
+            <br><br><br>
+            <button id="blow_light" onclick="blow_light_candle()">blow the candle</button>
+
+        </div>
+
+    </body>
+
+
+    <script>
+
+        function blow_light_candle() {
+            if(document.getElementById("cake_flame").style.display != "none") {
+                document.getElementById("cake_flame").style.display = "none";
+                document.getElementById("blow_light").innerHTML = "light the candle";
+            } else {
+                document.getElementById("cake_flame").style.display = "block";
+                document.getElementById("blow_light").innerHTML = "blow the candle";
+            }
+        }
+        
+    </script>
+
+</html>
